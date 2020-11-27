@@ -5,78 +5,12 @@
     <title></title>
   </head>
   <body>
-  <script>
-
-u = 0;
-c = 0;
-function game() {
-	
-	for (i = 1; i <= 5; i++) {
-		user = prompt('Rock, Paper or Scissors?');
-		playerSelection = user.toLowerCase();
-		computerSelection = computerPlay();
-		alert(player(playerSelection, computerSelection));
-		alert('The score is ' + u + ' to ' + c);
-	}
-	if (u > c) {
-		alert('You won the game! The score is ' + u + ' to ' + c);
-	}
-	else if (c > u) {
-		alert('You lost the game! The score is ' + u + ' to ' + c);
-	}
-	else if (c === u) {
-		alert('You tied the computer! The score is ' + u + ' to ' + c);
-	}
-	
-}
-
-function computerPlay() {
-  computer = Math.floor(Math.random()*3);
-  if (computer === 0) {
-    return 'rock';
-  }
-  else if (computer === 1) {
-    return 'paper';
-  }
-  else if (computer === 2) {
-    return 'scissors';
-  }
-}
-
-function player(playerSelection, computerSelection) {
-  if (playerSelection === computerSelection) {
-    u++;
-	c++;
-	return "It's a tie";
-  }
-  else if (playerSelection === 'rock' && computerSelection === 'paper') {
-    c++;
-	return "You lose! Paper beats rock.";
-  }
-  else if (playerSelection === 'paper' && computerSelection === 'rock') {
-    u++;
-	return "You win! Paper beats rock.";
-  }
-  else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-    u++;
-	return "You Win! Rock beats scissors.";
-  }
-  else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-    c++;
-	return "You lose! Rock beats scissors.";
-  }
-  else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-    c++;
-	return "You lose! Scissors beats paper.";
-  }
-  else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-    u++;
-	return "You win! Scissors beats paper.";
-  }
-}
-
-
-</script>
+  <div>
+    <button id = 'rock'>Rock</button>
+    <button id = 'paper'>Paper</button>
+    <button id = 'scissors'>Scissors</button>
+  </div>
+  <script src='RPS.js'></script>
     <header></header>
     <main></main>
     <footer></footer>
