@@ -1,1 +1,1 @@
- Simple backend right now for rock, paper and scissors.
+Simple RPS game, bascially barebones for now.
